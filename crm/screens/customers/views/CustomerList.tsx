@@ -1,4 +1,4 @@
-import {View, Text, FlatList, StyleSheet} from "react-native";
+import {View, Text, FlatList } from "react-native";
 import CustomerListTile from "../components/CustomerListTile";
 import config from "../../../config";
 import {useEffect, useState} from "react";
@@ -25,7 +25,8 @@ function CustomerList() {
         <View>
             <Text>List</Text>
 
-            <FlatList data={customers} renderItem={CustomerListTile}></FlatList>
+     {/*       <FlatList data={customers} renderItem={CustomerListTile}></FlatList>*/}
+            <FlatList data={customers} renderItem={(props)=> <CustomerListTile{...props} />}></FlatList>
 
         </View>
     )

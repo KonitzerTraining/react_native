@@ -18,7 +18,7 @@ function CustomersPage() {
                     headerShown: false
                 }}></Stack.Screen>
                 <Stack.Screen name="CustomerDetails" component={CustomerDetails} options={{
-                    headerShown: false
+                    headerShown: false,
                 }}></Stack.Screen>
                 <Stack.Screen name="CustomerNew" component={CustomerNew} options={{
                     headerShown: false
