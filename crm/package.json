@@ -8,7 +8,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
-    "backend": "json-server -w db.json -p 3001"
+    "backend": "json-server -w db.json -p 3001 -d 700"
   },
   "jest": {
     "preset": "jest-expo"
