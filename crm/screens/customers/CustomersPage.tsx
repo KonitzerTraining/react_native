@@ -2,6 +2,7 @@ import {View, Text} from "react-native";
 import config from "../../config";
 import axios from "axios";
 import {useEffect, useState} from "react";
+import CustomerList from "./components/CustomerList";
 
 const url = config.api + 'customers/';
 
@@ -33,8 +34,9 @@ function CustomersPage() {
 
     return (
         <View>
-            <Text>Hello {customers[0]?.name}</Text>
-
+          {/*  <Text>Hello {customers[0]?.name}</Text>*/}
+            <Text>Customer List</Text>
+            <CustomerList listData={customers}></CustomerList>
         </View>
     )
 }
