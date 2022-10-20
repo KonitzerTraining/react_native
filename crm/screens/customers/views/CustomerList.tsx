@@ -1,4 +1,4 @@
-import {View, Text, FlatList} from "react-native";
+import {View, Text, FlatList, StyleSheet} from "react-native";
 import CustomerListTile from "../components/CustomerListTile";
 import config from "../../../config";
 import {useEffect, useState} from "react";
@@ -32,3 +32,4 @@ function CustomerList() {
 }
 
 export default CustomerList;
+
