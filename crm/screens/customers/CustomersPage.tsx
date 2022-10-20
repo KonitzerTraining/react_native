@@ -1,7 +1,4 @@
 import {View, Text} from "react-native";
-import config from "../../config";
-import axios from "axios";
-import {useEffect, useState} from "react";
 import CustomerList from "./views/CustomerList";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import CustomerDetails from "./views/CustomerDetails";
@@ -9,7 +6,6 @@ import CustomerNew from "./views/CustomerNew";
 import CustomerEdit from "./views/CustomerEdit";
 
 const Stack = createNativeStackNavigator();
-
 
 function CustomersPage() {
 
