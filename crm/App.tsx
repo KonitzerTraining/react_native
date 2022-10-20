@@ -4,7 +4,7 @@ import {NavigationContainer} from "@react-navigation/native";
 import StartPage from "./screens/StartPage";
 
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import CustomersPage from "./screens/CustomersPage";
+import CustomersPage from "./screens/customers/CustomersPage";
 import AboutPage from "./screens/AboutPate";
 import HelpPage from "./screens/HelpPage";
 const Drawer = createDrawerNavigator();

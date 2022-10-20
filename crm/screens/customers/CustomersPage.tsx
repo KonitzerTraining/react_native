@@ -1,5 +1,5 @@
 import {View, Text} from "react-native";
-import config from "../config";
+import config from "../../config";
 import axios from "axios";
 import {useEffect, useState} from "react";
 
@@ -10,7 +10,7 @@ function CustomersPage() {
     // let customers: any = [];
 
     // Array Deconstructor
-    let [customers, setCustomers] = useState([1,2]);
+    let [customers, setCustomers] = useState([] as Customer[]);
     console.log(customers);
 
     useEffect(() => {
@@ -33,8 +33,8 @@ function CustomersPage() {
 
     return (
         <View>
-            <Text>Hello world</Text>
-            {customers.length}
+            <Text>Hello {customers[0]?.name}</Text>
+
         </View>
     )
 }
