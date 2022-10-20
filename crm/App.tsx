@@ -1,8 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-
 import useCachedResources from './hooks/useCachedResources';
-import {View, Text} from "react-native";
+import {NavigationContainer} from "@react-navigation/native";
+import StartPage from "./screens/StartPage";
+
+import { createDrawerNavigator } from '@react-navigation/drawer';
+const Drawer = createDrawerNavigator();
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -12,11 +14,14 @@ export default function App() {
   } else {
     return (
       <SafeAreaProvider>
-       <View>
-         <Text>Hello</Text>
-         <StatusBar></StatusBar>
-       </View>
+   {/*       <StartPage></StartPage>*/}
+        <NavigationContainer>
+            <Drawer.Navigator>
+                <Drawer.Screen name="Home" component={StartPage}  />
+            </Drawer.Navigator>
+        </NavigationContainer>
       </SafeAreaProvider>
     );
   }
 }
+
