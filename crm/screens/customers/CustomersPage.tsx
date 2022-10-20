@@ -2,41 +2,35 @@ import {View, Text} from "react-native";
 import config from "../../config";
 import axios from "axios";
 import {useEffect, useState} from "react";
-import CustomerList from "./components/CustomerList";
+import CustomerList from "./views/CustomerList";
+import {createNativeStackNavigator} from "@react-navigation/native-stack";
+import CustomerDetails from "./views/CustomerDetails";
+import CustomerNew from "./views/CustomerNew";
+import CustomerEdit from "./views/CustomerEdit";
 
-const url = config.api + 'customers/';
+const Stack = createNativeStackNavigator();
+
 
 function CustomersPage() {
-
-    // let customers: any = [];
-
-    // Array Deconstructor
-    let [customers, setCustomers] = useState([] as Customer[]);
-    console.log(customers);
-
-    useEffect(() => {
-        async function loadCustomersAsync() {
-
-        let response =  await axios.get(url);
-            setCustomers(response.data);
-        }
-
-        loadCustomersAsync();
-    }, []);
-
-
-/*    useEffect(() => {
-        axios.get(url).then((response) => {
-            console.log(response.data);
-            setCustomers(response.data);
-        })
-    }, []);*/
 
     return (
         <View>
           {/*  <Text>Hello {customers[0]?.name}</Text>*/}
-            <Text>Customer List</Text>
-            <CustomerList listData={customers}></CustomerList>
+            <Text>Customer Dashboard</Text>
+            <Stack.Navigator>
+                <Stack.Screen name="CustomerList" component={CustomerList} options={{
+                    headerShown: false
+                }}></Stack.Screen>
+                <Stack.Screen name="CustomerDetails" component={CustomerDetails} options={{
+                    headerShown: false
+                }}></Stack.Screen>
+                <Stack.Screen name="CustomerNew" component={CustomerNew} options={{
+                    headerShown: false
+                }}></Stack.Screen>
+                <Stack.Screen name="CustomerEdit" component={CustomerEdit} options={{
+                    headerShown: false
+                }}></Stack.Screen>
+            </Stack.Navigator>
         </View>
     )
 }
