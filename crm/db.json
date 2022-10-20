@@ -1,19 +1,19 @@
 {
   "customers": [
     {
-      "id": 1,
-      "name": "Tim",
-      "credit": 200
-    },
-    {
       "id": 2,
       "name": "Stan",
       "credit": 200
     },
     {
-      "id": 4,
+      "id": 3,
       "name": "Lee",
-      "credit": 200
+      "credit": 234
+    },
+    {
+      "id": 5,
+      "name": "Matt",
+      "credit": 203
     }
   ]
 }

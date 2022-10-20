@@ -1,14 +1,14 @@
 import {View, Text, Button} from "react-native";
 import axios from "axios";
 import config from "../../../config";
-
 const url = config.api + 'customers/';
 
-function CustomerDetails({route}: any) {
+function CustomerDetails({route, navigation}: any) {
     const customer = route.params.customer;
 
     async function deleteHandler() {
         let response = await axios.delete(url + customer.id);
+        navigation.navigate('CustomerList')
         console.log(response);
     }
 
