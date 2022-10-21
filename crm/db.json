@@ -7,8 +7,28 @@
     },
     {
       "id": 5,
-      "name": "Matt",
+      "name": "Matt II.",
       "credit": 203
+    },
+    {
+      "name": "Lee",
+      "credit": 500,
+      "id": 6
+    },
+    {
+      "name": "Joe",
+      "credit": 100,
+      "id": 9
+    },
+    {
+      "name": "Joe",
+      "credit": 100,
+      "id": 10
+    },
+    {
+      "name": "Joe",
+      "credit": 100,
+      "id": 11
     }
   ]
 }

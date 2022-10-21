@@ -9,7 +9,7 @@ function CustomerListTile({item: customer}: { item: Customer }) {
 
     function selectCustomerHandler() {
         console.log(customer);
-        navigation.push('CustomerDetails', {
+        navigation.navigate('CustomerDetails', {
             customer
         });
     }
