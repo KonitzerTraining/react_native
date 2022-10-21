@@ -5,11 +5,11 @@ import {useNavigation} from "@react-navigation/native";
 function CustomerListTile({item: customer}: { item: Customer }) {
 
 
-    const navigation = useNavigation();
+    const navigation = useNavigation<any>();
 
     function selectCustomerHandler() {
         console.log(customer);
-        navigation.navigate('CustomerDetails', {
+        navigation.push('CustomerDetails', {
             customer
         });
     }

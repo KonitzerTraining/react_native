@@ -4,10 +4,16 @@ import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import CustomerDetails from "./views/CustomerDetails";
 import CustomerNew from "./views/CustomerNew";
 import CustomerEdit from "./views/CustomerEdit";
+import {useDispatch} from "react-redux";
+import {loadCustomers} from "./store/customerSlice";
+import {AppDispatch} from "../../store";
 
 const Stack = createNativeStackNavigator();
 
 function CustomersPage() {
+
+    const dispatch = useDispatch<AppDispatch>()
+    dispatch(loadCustomers());
 
     return (
         <View>

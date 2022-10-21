@@ -23,7 +23,9 @@ export default function App() {
                 <NavigationContainer>
                     <Drawer.Navigator>
                         <Drawer.Screen name="Home" component={StartPage}/>
-                        <Drawer.Screen name="Customers" component={CustomersPage}/>
+                        <Drawer.Screen name="Customers" component={CustomersPage} options={{
+                            headerShown: true,
+                        }}/>
                         <Drawer.Screen name="About" component={AboutPage}/>
                         <Drawer.Screen name="Help" component={HelpPage}/>
                     </Drawer.Navigator>
